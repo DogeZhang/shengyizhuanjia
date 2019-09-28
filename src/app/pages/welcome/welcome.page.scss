@@ -1,0 +1,13 @@
+app-wlecome ion-toolbar {
+    background: transparent;
+    border-color: transparent;
+}
+
+app-welcome {
+    .fixed-bottom{
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+    }
+}
+
