@@ -2,6 +2,7 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 import { AuthenticationCodeService } from 'src/app/services/authentication-code.service';
+import { LocalStorageService } from 'src/app/shared/services/local-storage.service';
 // import { accessSync } from 'fs';
 
 @Component({
@@ -23,7 +24,7 @@ export class SignupPage implements OnInit {
     confirmPassword: '',
     code: ''
   };
-  constructor(private authenticationCodeService: AuthenticationCodeService) { }
+  constructor(private authenticationCodeService: AuthenticationCodeService, private localStorageService:LocalStorageService) { }
   
 
 @ViewChild('signupSlides', {static: false}) signupSlides: IonSlides;
@@ -73,5 +74,8 @@ export class SignupPage implements OnInit {
     if(this.passwordChecked){
       this.onNext();
     }
+  }
+  finish(){
+    this.localStorageService.set("userInfo", this.signup)
   }
 }

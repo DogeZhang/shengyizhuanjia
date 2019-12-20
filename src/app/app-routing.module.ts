@@ -18,7 +18,8 @@ const routes: Routes = [
   },
   { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule', canActivate: [StartAppService]  },
   { path: 'passport', loadChildren: './pages/passport/passport.module#PassportModule' },
-  { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' }
+  { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' }
 ];
 
 @NgModule({

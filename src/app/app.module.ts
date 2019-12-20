@@ -20,7 +20,8 @@ import { CoreModule } from './core/core.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    
   ],
   providers: [
     StatusBar,
