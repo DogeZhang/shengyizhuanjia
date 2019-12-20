@@ -23,6 +23,4 @@ const routes: Routes = [
   ],
   declarations: [SignupPage]
 })
-export class SignupPageModule {
-  private slideIndex = 0;
-}
+export class SignupPageModule {}

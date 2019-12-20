@@ -17,7 +17,8 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule', canActivate: [StartAppService]  },
-  { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' }
+  { path: 'passport', loadChildren: './pages/passport/passport.module#PassportModule' },
+  { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' }
 ];
 
 @NgModule({
