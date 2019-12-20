@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'list',
@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule', canActivate: [StartAppService]  },
   { path: 'passport', loadChildren: './pages/passport/passport.module#PassportModule' },
   { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' },
-  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' }
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' }
 ];
 
 @NgModule({
