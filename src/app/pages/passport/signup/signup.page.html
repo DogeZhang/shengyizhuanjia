@@ -10,21 +10,21 @@
       <img src="assets/img/registered_one.png" alt="" *ngIf="slideIndex!==0">
       <img src="assets/img/registered_one_one.png" alt="" *ngIf="slideIndex===0">
     </ion-col>
-    <ion-col align-self-center>
+    <ion-col class="ion-align-self-center">
       <hr class="line">
     </ion-col>
     <ion-col>
       <img src="assets/img/registered_two.png" alt="" *ngIf="slideIndex!==1">
       <img src="assets/img/registered_two_two.png" alt="" *ngIf="slideIndex===1">
     </ion-col>
-    <ion-col align-self-center>
+    <ion-col class="ion-align-self-center">
       <hr class="line">
     </ion-col>
     <ion-col>
       <img src="assets/img/registered_three.png" alt="" *ngIf="slideIndex!==2">
       <img src="assets/img/registered_three_three.png" alt="" *ngIf="slideIndex===2">
     </ion-col>
-    <ion-col align-self-center>
+    <ion-col class="ion-align-self-center">
       <hr class="line">
     </ion-col>
     <ion-col>
@@ -39,7 +39,7 @@
           <ion-item>
               <ion-input name="phone" type="number" placeholder="请输入您的手机号码" required pattern="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,3,5-9]))\d{8}$" [(ngModel)]="signup.phone" #phone="ngModel"></ion-input>
           </ion-item>
-          <div padding-horizontal>
+          <div class="ion-padding-horizontal">
             <ion-button type="submit" expand="full" color="warning" [disabled]="phoneForm.invalid" >下一步</ion-button>
           </div>
           <ion-text text-left color="danger" *ngIf="phone.invalid && phone.touched">
@@ -57,10 +57,10 @@
             <ion-input name="code" type="number" slot="start" required placeholder="输入验证码" [(ngModel)]="signup.code" #code="ngModel"></ion-input>
             <ion-button color="primary" expand="full" slot="end" (click)="sendCode()" class="full-width">发送验证码</ion-button>
           </ion-item>
-          <div padding-horizontal>
+          <div class="ion-padding-horizontal">
             <ion-button color="warning" expand="full" (click)="onPrevious()">上一步</ion-button>
           </div>
-          <div padding-horizontal>
+          <div class="ion-padding-horizontal">
               <ion-button type="submit" expand="full" color="warning" [disabled]="codeForm.invalid" >下一步</ion-button>
           </div>
           <ion-text text-left color="danger" *ngIf="code.invalid && code.touched">
@@ -91,10 +91,10 @@
           <ion-item>
               <ion-input name="confirmPassword" type="password" placeholder="请输入确认密码" required pattern="^[a-zA-Z0-9]{6,16}$" [(ngModel)]="signup.confirmPassword" #confirmPassword="ngModel"></ion-input>
           </ion-item>
-          <div padding-horizontal>
+          <div class="ion-padding-horizontal">
             <ion-button color="warning" expand="full" (click)="onPrevious()">上一步</ion-button>
           </div>
-          <div padding-horizontal>
+          <div class="ion-padding-horizontal">
             <ion-button type="submit" expand="full" color="warning" [disabled]="informForm.invalid" >下一步</ion-button>
           </div>
           <ion-text text-left color="danger" *ngIf="shopName.invalid && shopName.touched">
@@ -127,8 +127,8 @@
           <ion-item>
             注册成功！
           </ion-item>
-          <div padding-horizontal>
-            <ion-button color="warning" expand="full">完成</ion-button>
+          <div class="ion-padding-horizontal">
+            <ion-button color="warning" expand="full" (click)="finish()" href="login">完成</ion-button>
           </div>
           <!-- 根据需求添加若干ion-item -->
         </ion-list>
