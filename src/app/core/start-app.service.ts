@@ -19,7 +19,7 @@ export class StartAppService {
       this.localStorageService.set(APP_KEY, appConfig);
       return true;
     } else {
-      this.router.navigateByUrl('/signup'); //改成”signup“方便调试 原”home“
+      this.router.navigateByUrl('/login'); //改成”signup“方便调试 原”home“
     }
   }
 }
