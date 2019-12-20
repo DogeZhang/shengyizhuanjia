@@ -15,11 +15,12 @@ export class StartAppService {
       version: '1.0.0'
     });
     if(appConfig.hasRun === false) {
-      appConfig.hasRun = true;
-      this.localStorageService.set(APP_KEY, appConfig);
+      // 已经添加了登录功能，所以一下方法不需要
+      // appConfig.hasRun = true; 
+      // this.localStorageService.set(APP_KEY, appConfig);
       return true;
     } else {
-      this.router.navigateByUrl('/login'); //改成”signup“方便调试 原”home“
+      this.router.navigateByUrl('/home'); //改成”signup“方便调试 原”home“
     }
   }
 }
