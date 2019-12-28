@@ -20,7 +20,9 @@ const routes: Routes = [
   { path: 'passport', loadChildren: './pages/passport/passport.module#PassportModule' },
   { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' }
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },  { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
+  { path: 'shop', loadChildren: './pages/shop/shop.module#ShopPageModule' }
+
 ];
 
 @NgModule({
