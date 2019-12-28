@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'signup', loadChildren: './pages/passport/signup/signup.module#SignupPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },  { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
-  { path: 'shop', loadChildren: './pages/shop/shop.module#ShopPageModule' }
+  { path: 'shop', loadChildren: './pages/shop/shop.module#ShopPageModule' },
+  { path: 'category-list', loadChildren: './pages/category-list/category-list.module#CategoryListPageModule' }
 
 ];
 
