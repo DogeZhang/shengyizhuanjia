@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons (click)="goBack()" style="font-size: 18px;" slot="start">
+      <ion-icon name="arrow-back"></ion-icon>返回
+    </ion-buttons>
+    <ion-title>
+      店铺名称
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset="true">
+    <ion-item>
+      <ion-input name="username" type="text" placeholder="店铺名称" [(ngModel)]="storeName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button style="width: 100%;" expand="full" color="primary" (click)="saveStoreName()">保存</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

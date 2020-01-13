@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-import { IonSlides } from '@ionic/angular';
+import { IonSlides, AlertController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 import { AuthenticationCodeService } from 'src/app/services/authentication-code.service';
 import { LocalStorageService } from 'src/app/shared/services/local-storage.service';
@@ -24,7 +24,10 @@ export class SignupPage implements OnInit {
     confirmPassword: '',
     code: ''
   };
-  constructor(private authenticationCodeService: AuthenticationCodeService, private localStorageService:LocalStorageService) { }
+  constructor(private authenticationCodeService: AuthenticationCodeService, 
+    private localStorageService:LocalStorageService,
+    private alertCtrl: AlertController,
+    ) { }
   
 
 @ViewChild('signupSlides', {static: false}) signupSlides: IonSlides;
@@ -51,8 +54,15 @@ export class SignupPage implements OnInit {
       this.onNext();
     }
   }
-  sendCode(){
-    this.CODE = "验证码为：" + this.authenticationCodeService.createCode(4) + "";
+  async sendCode(){
+    let c = this.authenticationCodeService.createCode(4)
+    this.CODE = "验证码为：" + c + "";
+    const alert = await this.alertCtrl.create({
+      header: '验证码为：',    
+      message: c,
+      buttons: ['确认']
+    });
+    await alert.present();
     // this.code = "sdfsdf";
     this.codeSend = false;
     console.log(this.CODE);

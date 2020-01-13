@@ -25,7 +25,7 @@ export class WelcomePage implements OnInit {
   }
 
   onSkip(){
-    // 欢迎页面的跳过按钮功能实现
+    this.slides.slideTo(3, 500);
   }
 
   // ionViewWillEnter() {
